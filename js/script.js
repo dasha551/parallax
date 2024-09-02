@@ -1,3 +1,6 @@
+
+
+
 // PARALLAX START 
 const parallax_el = document.querySelectorAll(".parallax");
 

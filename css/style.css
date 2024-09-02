@@ -475,3 +475,48 @@ li {
     text-align: center;
 }
 /* NUMBER END  */
+
+/* ABOUT START  */
+.section__about{
+    position: relative;
+}
+.mask-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mask-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about_text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 250px 0;
+}
+.about-title{
+    font-family: "Roboto-Black", serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 119%;
+    text-align: center;
+    color: #000;
+    padding-bottom: 32px;
+    text-align: center;
+    max-width: 653px;
+}
+.about-destigration{
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #6F7787;
+    padding-bottom: 36px;
+    max-width: 470px;
+}
+
+
+/* ABOUT END  */

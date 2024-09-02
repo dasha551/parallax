@@ -88,6 +88,7 @@ header{
     height: 100vh;
     width: 100%;
     overflow: hidden;
+
 }
 .parallax {
     pointer-events: none;
@@ -96,7 +97,7 @@ header{
 .bg-img {
     position: absolute;
     width: 2800px;
-    top: calc(50% - 390px);
+    top: calc(50% - 290px);
     left: calc(50% + 10px);
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -128,8 +129,8 @@ header{
 .mountain_9 {
     position: absolute;
     z-index: 5;
-    width: 470px;
-    top: calc(50% + 113px);
+    width: 570px;
+    top: calc(50% + 213px);
     left: calc(50% - 457px);
     transform: translate(-50%, -50%);
 }
@@ -197,8 +198,8 @@ header{
 .mountain_5 {
     position: absolute;
     z-index: 12;
-    width: 625px;
-    top: calc(50% + 250px);
+    width: 825px;
+    top: calc(50% + 290px);
     left: calc(50% + 130px);
     transform: translate(-50%, -50%);
 }
@@ -206,7 +207,7 @@ header{
     position: absolute;
     z-index: 13;
     width: 1600px;
-    top: calc(50% + 110px);
+    top: calc(50% + 210px);
     left: calc(50% - 15px);
     transform: translate(-50%, -50%);
 }
@@ -221,9 +222,9 @@ header{
 .mountain_3 {
     position: absolute;
     z-index: 25;
-    /* width: 780px; */
-    top: calc(50% + 196px);
-    left: calc(50% + 600px);
+    width: 580px;
+    top: calc(50% + 80px);
+    left: calc(50% + 700px);
     transform: translate(-50%, -50%);
 }
 
@@ -236,15 +237,15 @@ header{
     position: absolute;
     z-index: 16;
     width: 1560px;
-    top: calc(50% + 147px);
+    top: calc(50% + 247px);
     left: calc(50% - 30px);
     transform: translate(-50%, -50%);
 }
 .mountain_2 {
     position: absolute;
     z-index: 17;
-    width: 690px;
-    top: calc(50% + 154px);
+    width: 890px;
+    top: calc(50% + 254px);
     left: calc(50% + 412px);
     transform: translate(-50%, -50%);
 }
@@ -252,16 +253,16 @@ header{
     position: absolute;
     z-index: 17;
     width: 790px;
-    top: calc(50% + 274px);
+    top: calc(50% + 204px);
     left: calc(50% - 420px);
     transform: translate(-50%, -50%);
 }
 .mountain_1 {
     position: absolute;
     z-index: 25;
-    /* width: 530px; */
-    top: calc(50% + 17px);
-    left: calc(50% - 601px);
+    width: 500px;
+    top: calc(50% + 100px);
+    left: calc(50% - 721px);
     transform: translate(-50%, -50%);
 }
 .sun-rays{
@@ -280,9 +281,9 @@ header{
 }
 .fog-1 {
     position: absolute;
-    z-index: 21;
-    width: 1600px;
-    top: calc(100% - 355px);
+    z-index: 10;
+    width: 800px;
+    top: calc(50% + 353px);
     left: 50%;
     transform: translate(-50%, -50%);
 }

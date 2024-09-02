@@ -1,3 +1,4 @@
+// PARALLAX START 
 const parallax_el = document.querySelectorAll(".parallax");
 
 let xValue, yValue = 0;
@@ -34,8 +35,8 @@ window.addEventListener("mousemove", (e) => {
 
 
 });
-
-// GSAP ANIMATION 
+// PARALLAX END 
+// GSAP ANIMATION PARALLAX START 
 
 let timeline = gsap.timeline();
 
@@ -62,3 +63,24 @@ timeline.from(".text h1", {
     },
     "3"
 );
+
+// GSAP ANIMATION PARALLAX END 
+
+// SWIPER START 
+const experienceSwiper = new Swiper('.swiper', {
+	speed: 1000,
+	spaceBetween: 0,
+	autoHeight: true,
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: true,
+	},
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+// SWIPER END 

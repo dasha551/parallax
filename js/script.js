@@ -39,6 +39,9 @@ window.addEventListener("mousemove", (e) => {
 
 let timeline = gsap.timeline();
 
+
+
+
 timeline.from(".text h1", {
     y:
         window.innerHeight - 

@@ -531,14 +531,33 @@ li {
 
 /* VIDEO START  */
 .section__video {
-    background-color: #000;
+    background-color: #010A20;
+    position: relative;
+    z-index: 1;
 }
-.main__video-box{
+
+.section__video::after {
+    content: '';
+    background-image: url('../img/video-bg.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.main__video-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 201px;
+    position: relative;
+    z-index: 3;
 }
+
 .video-title{
     font-family: "Roboto-Black", serif;
     padding: 140px 0 67px 0;
@@ -547,11 +566,79 @@ li {
     font-size: 42px;
     line-height: 119%;
     text-align: center;
+
+}
+
+.iframe-box {
+    position: relative;
+}
+.video-overlay {
+    position: absolute;
+    width: 1056px;
+    height: 594px;
+    background-image: url('../img/bg-frame.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    top: 0;
+}
+.video-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 100px;
+    background: #e93a7d;
 }
 
 
 
+.desk__video-block {
+    display: flex;
+    flex-direction: row;
+    gap: 74px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 125px;
+}
+.desk__video {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+    align-items: center;
+}
 
+.desk__video-overlay1 {
+    background-image: url('../img/desk_video-1.png');
+    position: absolute;
+    width: 233px;
+    height: 151px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-2 {
+    background-image: url('../img/desk_video-2.png');
+}
 
+.desk-title {
+    font-family: "Roboto-Black", serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    padding-bottom: 15px;
+}
+.desk-comment {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    opacity: 0.7;
+    max-width: 340px;
+}
 
 /* VIDEO END  */

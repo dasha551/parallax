@@ -87,3 +87,24 @@ const experienceSwiper = new Swiper('.swiper', {
     },
 });
 // SWIPER END 
+
+
+
+// VIDEO START
+const videoOverlays = document.querySelectorAll('.video-overlay, .desk__video-overlay1');
+const videoIframes = document.querySelectorAll('.video-iframe, .desk-iframe');
+
+videoOverlays.forEach((overlay, index) => {
+    overlay.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        videoIframes[index].contentWindow.postMessage('{"event": "command", "func": "playVideo"}', '*');
+    });
+});
+
+videoIframes.forEach((iframe, index) => {
+    iframe.contentWindow.addEventListener('click', () => {
+        videoOverlays[index].style.display = 'block';
+        iframe.contentWindow.postMessage('{"event": "command", "func": "pauseVideo"}', '*');
+    });
+});
+// VIDEO END 

@@ -642,3 +642,51 @@ li {
 }
 
 /* VIDEO END  */
+
+
+/* GALLERY START  */
+
+.gallery__text-box {
+    padding: 177px 0 71px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-title {
+    font-family: "Roboto-Black", serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+    padding-bottom: 41px;
+    color: #000;
+}
+
+.gallery-desk {
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #6F7787;
+    max-width: 511px;
+}
+.gallery__photo-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 230px;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.gallery-photo {
+    border-radius: 10px;
+}
+
+
+
+/* GALLERY END  */

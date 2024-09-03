@@ -1,4 +1,9 @@
-
+// BURGER START 
+document.querySelector('.burger-menu').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.burger-nav').classList.toggle('open');
+});
+// BURGER END 
 
 
 // PARALLAX START 

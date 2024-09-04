@@ -11,7 +11,7 @@
     <script src="js/gsap.min.js" defer></script>
     <script src="js/ScrollTrigger.min.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script src="js/SmoothScroll.min.js" defer></script>
     <script src="js/script.js" defer></script>
     <title>EXPLORE INDONESIA</title>
 </head>
@@ -29,12 +29,7 @@
     </div>
 
 
-
-
-
-
-
-    <header class="header hide">
+    <header id="up" class="header hide">
         <div class="header__container">
             <div class="logo">
                 <img src="img/icon.svg" alt="logo" class="logo-img">
@@ -45,19 +40,19 @@
             </div>
             <nav class="nav">
                 <ul class="header-nav">
-                    <li><a class="header-link" href="#">destinations</a></li>
-                    <li><a class="header-link" href="#">experiences</a></li>
-                    <li><a class="header-link" href="#">about</a></li>
-                    <li><a class="header-link" href="#">gallery</a></li>
+                    <li><a class="header-link" data-link="destinations">destinations</a></li>
+                    <li><a class="header-link" data-link="experiences">experiences</a></li>
+                    <li><a class="header-link" data-link="about">about</a></li>
+                    <li><a class="header-link" data-link="gallery">gallery</a></li>
                 </ul>
             </nav>
             <div class="burger-nav">
                 <nav class="burger-navigation">
                     <ul class=" header-nav nav-box">
-                        <li><a class="header-link burger-link" href="#">destinations</a></li>
-                        <li><a class="header-link burger-link" href="#">experiences</a></li>
-                        <li><a class="header-link burger-link" href="#">about</a></li>
-                        <li><a class="header-link burger-link" href="#">gallery</a></li>
+                        <li><a class="header-link burger-link" data-link="destinations">destinations</a></li>
+                        <li><a class="header-link burger-link" data-link="experiences">experiences</a></li>
+                        <li><a class="header-link burger-link" data-link="about">about</a></li>
+                        <li><a class="header-link burger-link" data-link="gallery">gallery</a></li>
                     </ul>
                 </nav>
             </div>
@@ -125,7 +120,7 @@
 
     <main class="main">
 
-        <section class="section__destigration">
+        <section id="destinations" class="section__destigration">
             <div class="container">
                 <div class="destigration__block destigration-1">
                     <img src="img/destigration_1.jpg" alt="Destigration" class="destigration-image">
@@ -138,7 +133,7 @@
                             mollis rhoncus.
                         </div>
                         <div class="red-button-box">
-                            <a class="red-button" href="#">Learn more</a>
+                            <a class="red-button">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +148,7 @@
                             mollis rhoncus.
                         </div>
                         <div class="red-button-box">
-                            <a class="red-button" href="#">Learn more</a>
+                            <a class="red-button">Learn more</a>
                         </div>
                     </div>
                     <img src="img/destigration_2.jpg" alt="Destigration" class="destigration-image">
@@ -161,7 +156,7 @@
             </div>
         </section>
 
-        <section class="section__experience">
+        <section id="experiences" class="section__experience">
             <div class="container">
                 <div class="experience-title">
                     Explore Our Secrets
@@ -230,7 +225,7 @@
                     <div class="numbers-title">
                         By The Numbers
                     </div>
-                    <div class="numbers-description">
+                    <div id="number" class="numbers-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </div>
                     <div class="numbers__item-box">
@@ -253,7 +248,7 @@
 
         </section>
 
-        <section class="section__about">
+        <section id="about" class="section__about">
             <img src="img/mask-left.svg" alt="Mask" class="mask-left">
             <div class="container">
                 <div class="about_text-box">
@@ -262,7 +257,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor.
                     </div>
                     <div class="red-button-box">
-                        <a class="red-button" href="#">Learn more</a>
+                        <a class="red-button">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -327,7 +322,7 @@
             <div class="container">
                 <div class="gallery__text-box">
                     <div class="gallery-title">Photo Gallery</div>
-                    <div class="gallery-desk">
+                    <div id="gallery" class="gallery-desk">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.
                     </div>
                 </div>
@@ -398,7 +393,7 @@
                         </div>
                     </div>
                     <div class="red-button-box steps-btn">
-                        <a class="red-button" href="#">Learn more</a>
+                        <a class="red-button">Learn more</a>
                     </div>
                 </div>
             </div>
@@ -409,6 +404,9 @@
 
     <footer class="footer">
         <div class="footer__container">
+            <div class="footer-up">
+                <img src="img/up.svg" alt="Up" class="img-up">
+            </div>
             <div class="logo__nav-box">
                 <div class="footer__logo-box">
                     <img src="img/icon.svg" alt="Logo" class="footer-logo">

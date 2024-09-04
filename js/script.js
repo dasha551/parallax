@@ -40,6 +40,36 @@ document.querySelector('.burger-menu').addEventListener('click', function() {
 // BURGER END 
 
 
+
+
+// anchor links START 
+
+const links = document.querySelectorAll('.header-link');
+for (let i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
+        document.getElementById(links[i].getAttribute('data-link')).scrollIntoView({behavior: 'smooth'});
+    };
+};
+
+const buttons = document.querySelectorAll('.red-button-box');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = function () {
+        document.getElementById('number').scrollIntoView({behavior: 'smooth'});
+    };
+};
+
+
+const footerBtn = document.querySelectorAll('.footer-up');
+for (let i = 0; i < footerBtn.length; i++) {
+    footerBtn[i].onclick = function () {
+        document.getElementById('up').scrollIntoView({behavior: 'smooth'});
+    };
+};
+
+
+// anchor links END 
+
+
 // PARALLAX START 
 const parallax_el = document.querySelectorAll(".parallax");
 
@@ -316,35 +346,6 @@ gsap.from('.about_text-box', {
 })
 
 // about end 
-
-// steps start 
-gsap.registerPlugin(ScrollTrigger);
-
-const animationDelay = 0.5; 
-
-
-gsap.utils.toArray('.steps__text-box').forEach((block, index) => {
-gsap.fromTo(block, {
-    yPercent: 100,
-    opacity: 0
-}, {
-    yPercent: 0,
-    opacity: 1,
-    duration: 1,
-    scrollTrigger: {
-    	trigger: block,
-    	start: 'top 80%',
-    	end: 'top 60%',
-    	scrub: true,
-      delay: index * animationDelay,
-    }
-});
-});
-
-
-// steps end 
-
-
 
 
 // GSAP ANIMATION END 

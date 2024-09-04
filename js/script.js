@@ -1,3 +1,10 @@
+window.addEventListener('message', function(event) {
+	if (event.origin === "https://parallax-gamma-ruby.vercel.app") { // Проверяем источник сообщения
+		console.log("Сообщение получено от iframe:", event.data); 
+		// Обрабатываем сообщение от iframe
+	}
+});
+
 // SMOOTH SCROLL START 
 SmoothScroll({
 	// Время скролла 400 = 0.4 секунды

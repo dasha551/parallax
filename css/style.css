@@ -974,6 +974,8 @@ li {
     height: 58px;
     background-color: #DD2242;
     border-radius: 50%;
+    animation: pulse 2s infinite;
+
 }
 
 .steps-title {

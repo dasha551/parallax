@@ -82,9 +82,6 @@ function update (cursorPosition) {
         let speedy = el.dataset.speedy;
         let speedz = el.dataset.speedz;
         let rotateSpeed = el.dataset.rotation;
-
-
-
         let isInLeft = parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1;
         let zValue = (cursorPosition - parseFloat(getComputedStyle(el).left)) * isInLeft * 0.1;
 
@@ -181,7 +178,7 @@ videoIframes.forEach((iframe, index) => {
 
 
 // ANIMATION COUNTER START 
-		var number = document.querySelector('.number1'),
+		let number = document.querySelector('.number1'),
 		numberTop = number.getBoundingClientRect().top,
 		start = +number.innerHTML, end = +number.dataset.max;
 
@@ -197,7 +194,7 @@ videoIframes.forEach((iframe, index) => {
 			}
 		});
 
-        var number2 = document.querySelector('.number2'),
+        let number2 = document.querySelector('.number2'),
 		number2Top = number2.getBoundingClientRect().top,
 		start2 = +number2.innerHTML, end2 = +number2.dataset.max;
 
@@ -213,7 +210,7 @@ videoIframes.forEach((iframe, index) => {
 			}
 		});
 
-        var number3 = document.querySelector('.number3'),
+        let number3 = document.querySelector('.number3'),
 		number1Top = number3.getBoundingClientRect().top,
 		start1 = +number3.innerHTML, end1 = +number3.dataset.max;
 
@@ -230,21 +227,7 @@ videoIframes.forEach((iframe, index) => {
 		});
 
 
-        var number3 = document.querySelector('.number3'),
-		number3Top = number3.getBoundingClientRect().top,
-		start3 = +number3.innerHTML, end3 = +number3.dataset.max;
 
-		window.addEventListener('scroll', function onScroll() {
-			if(window.pageYOffset > number3Top - window.innerHeight / 2) {
-				this.removeEventListener('scroll', onScroll);
-				var interval3 = setInterval(function() {
-					number3.innerHTML = ++start3;
-					if(start3 == end3) {
-						clearInterval(interval3);
-					}
-				}, 5);
-			}
-		});
 
 // ANIMATION COUNTER END 
 

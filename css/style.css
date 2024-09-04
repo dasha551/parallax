@@ -217,6 +217,7 @@ li {
     justify-content: flex-end;
     width: 30px;
     height: 18px;
+    cursor: pointer;
 }
 
 .burger-menu span {

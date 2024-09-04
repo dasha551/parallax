@@ -1,3 +1,37 @@
+// SMOOTH SCROLL START 
+SmoothScroll({
+	// Время скролла 400 = 0.4 секунды
+	animationTime : 800,
+	// Размер шага в пикселях
+	stepSize : 75,
+	
+	// Дополнительные настройки:
+	
+	// Ускорение
+	accelerationDelta : 30,
+	// Максимальное ускорение
+	accelerationMax : 2,
+	
+	// Поддержка клавиатуры
+	keyboardSupport : true,
+	// Шаг скролла стрелками на клавиатуре в пикселях
+	arrowScroll : 50,
+	
+	// Pulse (less tweakable)
+	// ratio of "tail" to "acceleration"
+	pulseAlgorithm : true,
+	pulseScale : 4,
+	pulseNormalize : 1,
+	
+	// Поддержка тачпада
+	touchpadSupport : true,
+	})
+
+// SMOOTH SCROLL END 
+
+
+
+
 // BURGER START 
 document.querySelector('.burger-menu').addEventListener('click', function() {
     this.classList.toggle('active');
@@ -237,7 +271,7 @@ tlLoader
 gsap.to('.destigration-1', {
 	scrollTrigger: {
 		trigger: '.section__destigration',
-		markers: true,
+		// markers: true,
 		start: 'top top',
 		scrub: true,
 	},
@@ -248,7 +282,7 @@ gsap.to('.destigration-1', {
 gsap.to('.destigration-2', {
 	scrollTrigger: {
 		trigger: '.section__destigration',
-		markers: true,
+		// markers: true,
 		start: 'bottom bottom',
 		scrub: true,
 	},
@@ -270,7 +304,7 @@ gsap.from('.about_text-box', {
 	opacity: 0,
 	scrollTrigger: {
 		trigger: '.section__experience', 
-		markers: true,
+
 	    start: 'bottom center', 
 	    // end: 'top top',
 		scrub: true,
@@ -286,26 +320,25 @@ gsap.from('.about_text-box', {
 // steps start 
 gsap.registerPlugin(ScrollTrigger);
 
-// Задержка для анимации каждого блока (в секундах)
 const animationDelay = 0.5; 
 
-// Анимация для каждого текстового блока
+
 gsap.utils.toArray('.steps__text-box').forEach((block, index) => {
-  gsap.fromTo(block, {
-    yPercent: 100, // Начальное положение - за пределами видимости
-    opacity: 0 // Начальная прозрачность - скрыт
-  }, {
-    yPercent: 0, // Конечное положение - на месте
-    opacity: 1, // Конечная прозрачность - виден
-    duration: 1, // Длительность анимации - 1 секунда
+gsap.fromTo(block, {
+    yPercent: 100,
+    opacity: 0
+}, {
+    yPercent: 0,
+    opacity: 1,
+    duration: 1,
     scrollTrigger: {
-      trigger: block, // Тrigger - сам текстовый блок
-      start: 'top 80%', // Анимация запускается, когда верхняя часть блока достигает 80% от верха окна
-      end: 'top 60%', // Анимация заканчивается, когда верхняя часть блока достигает 60% от верха окна
-      scrub: true, // Анимация синхронизирована с прокруткой
-      delay: index * animationDelay // Задержка для каждого блока
+    	trigger: block,
+    	start: 'top 80%',
+    	end: 'top 60%',
+    	scrub: true,
+      delay: index * animationDelay,
     }
-  });
+});
 });
 
 
@@ -314,5 +347,5 @@ gsap.utils.toArray('.steps__text-box').forEach((block, index) => {
 
 
 
-
+// GSAP ANIMATION END 
 

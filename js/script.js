@@ -57,19 +57,19 @@ timeline.from(".text h1", {
         document.querySelector(".text h1").getBoundingClientRect().top + 200,
     duration: 2,
     },
-    "1",
+    "5",
 ).from(".text h2",
     {
         y: -150,
         opacity: 0,
         duration: 1.5,
     },
-    "2.5"
+    "5.5"
 ).from(".hide", {
         opacity: 0,
         duration: 1.5,
     },
-    "3"
+    "6"
 );
 
 // GSAP ANIMATION PARALLAX END 
@@ -117,7 +117,7 @@ videoIframes.forEach((iframe, index) => {
 
 
 // ANIMATION COUNTER START 
-var number = document.querySelector('.number1'),
+		var number = document.querySelector('.number1'),
 		numberTop = number.getBoundingClientRect().top,
 		start = +number.innerHTML, end = +number.dataset.max;
 
@@ -183,3 +183,136 @@ var number = document.querySelector('.number1'),
 		});
 
 // ANIMATION COUNTER END 
+
+
+// LOADER GSAP START 
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tlLoader = gsap.timeline()
+
+
+tlLoader
+	.set('.loader__item', {yPercent: -100})
+	.set('.loader__title', {opacity: 0})
+	.to('.loader__item', {
+		yPercent: 0,
+		duration: 0.5,
+		stagger: 0.25,
+	})
+	.to('.loader__item', {
+		yPercent: 100,
+		duration: 0.5,
+		stagger: 0.25,
+	})
+	.to('.loader__title', {
+		opacity: 1,
+		duration: 1,
+		scale: 1.2,
+	})
+	.set('.loader__item', {
+		yPercent: -100,
+	})
+	.to('.loader__title', {
+		opacity: 0,
+		duration: 1,
+		scale: 0.8,
+	})
+	.to('.loader', {
+		yPercent: -100,
+		duration: 1,
+	}, '-=0.2')
+
+// LOADER GSAP END 
+
+
+// GSAP ANIMATION START 
+
+// destigration start 
+
+
+gsap.to('.destigration-1', {
+	scrollTrigger: {
+		trigger: '.section__destigration',
+		markers: true,
+		start: 'top top',
+		scrub: true,
+	},
+	xPercent: 80,
+	scale: 0.5,
+	duration: 1,
+})
+gsap.to('.destigration-2', {
+	scrollTrigger: {
+		trigger: '.section__destigration',
+		markers: true,
+		start: 'bottom bottom',
+		scrub: true,
+	},
+	xPercent: -80,
+	scale: 0.5,
+	duration: 1,
+
+})
+// destigration end 
+
+
+
+
+
+// about start 
+gsap.from('.about_text-box', { 
+	yPercent: 80,
+	scale: 0.5,
+	opacity: 0,
+	scrollTrigger: {
+		trigger: '.section__experience', 
+		markers: true,
+	    start: 'bottom center', 
+	    // end: 'top top',
+		scrub: true,
+	},
+	yPercent: -80,
+	scale: 1,
+
+	duration: 1, 
+})
+
+// about end 
+
+// steps start 
+gsap.registerPlugin(ScrollTrigger);
+
+// Задержка для анимации каждого блока (в секундах)
+const animationDelay = 0.5; 
+
+// Анимация для каждого текстового блока
+gsap.utils.toArray('.steps__text-box').forEach((block, index) => {
+  gsap.fromTo(block, {
+    yPercent: 100, // Начальное положение - за пределами видимости
+    opacity: 0 // Начальная прозрачность - скрыт
+  }, {
+    yPercent: 0, // Конечное положение - на месте
+    opacity: 1, // Конечная прозрачность - виден
+    duration: 1, // Длительность анимации - 1 секунда
+    scrollTrigger: {
+      trigger: block, // Тrigger - сам текстовый блок
+      start: 'top 80%', // Анимация запускается, когда верхняя часть блока достигает 80% от верха окна
+      end: 'top 60%', // Анимация заканчивается, когда верхняя часть блока достигает 60% от верха окна
+      scrub: true, // Анимация синхронизирована с прокруткой
+      delay: index * animationDelay // Задержка для каждого блока
+    }
+  });
+});
+
+
+// steps end 
+
+
+
+
+
+
